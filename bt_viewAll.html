@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<body>
+		<p align="right">
+		Logged in as {{user}} <br>
+		<a href="http://127.0.0.1:5000/signout">SignOut</a>
+		</p>
+		<center>
+		<table border = "1">		
+			<tr>
+				<b><td>ProductName</td>
+				<td>ProductVersion</td>
+				<td>BugTitle</td>
+				<td>BugDescription</td>
+				<td>Severity</td>
+				<td>BugStatus</td>
+				<td>EntryDate</td>
+				<td>ChangedByUser</td></b>
+			</tr>
+				
+			{%for row in rows%}
+			<tr>
+				<td>{{row[0]}}</td>
+				<td>{{row[1]}}</td>
+				<td>{{row[2]}}</td>
+				<td>{{row[3]}}</td>
+				<td>{{row[4]}}</td>
+				<td>{{row[5]}}</td>
+				<td>{{row[6]}}</td>
+				<td>{{row[7]}}</td>
+			</tr>
+			{%endfor%}
+		</table>
+		</center>
+		<center>{{msg}}</center>
+		<br><br>
+		<a href="http://127.0.0.1:5000/mainPage/{{user}}">Back to home..</a>
+	</body>
+</html>

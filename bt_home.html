@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<body>
+		<h1><center>Welcome to Bug Tracker!!!!</center></h1>
+		<h2><center>Now its easy to keep track of all the bugs in your product development...</center><h2>
+		<br><br><br>
+		<h2><center>Lets get started...</center></h2>
+		<center>
+		<form action = "http://127.0.0.1:5000/register">
+			<input type = "submit" value = "Newbie - Register!!"/> 
+		</form>
+		<br>
+		<form action = "http://127.0.0.1:5000/login">
+			<input type = "submit" value = "Ready to hunt - Login" />
+		</form>
+		</center>
+		{%for msg in get_flashed_messages()%}
+		<center>{{msg}}</center>
+		{%endfor%}
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<body>
+		<p align="right">
+		Logged in as {{user}} <br>
+		<a href="http://127.0.0.1:5000/signout">SignOut</a>
+		</p>
+		<h2>Now Let's do,</h2>
+		<br>
+		***<a href = "http://127.0.0.1:5000/submit/{{user}}">Submit a new Bug entry</a>
+		<br>
+		***<a href = "http://127.0.0.1:5000/edit/{{user}}">Edit an existing Bug entry</a>
+		<br>
+		***<a href = "http://127.0.0.1:5000/viewAll/{{user}}">View list of all Bugs</a>
+		<br>
+		<form action = "http://127.0.0.1:5000/view/{{user}}" method = "POST">***View specific bug (Enter only one of the following:)<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BugName:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "findBug"/>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductName: <input type = "text" name = "findPdt"/>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "submit" value = "ViewBug(s)">
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+	<body>
+		<p align="right">
+		Logged in as {{user}} <br>
+		<a href="http://127.0.0.1:5000/signout">SignOut</a>
+		</p>
+      
+		<form action = "http://127.0.0.1:5000/submit/submit_check/{{user}}" method = "POST">
+			<h3>Ready to enter the details about a New Bug</h3>
+			Product Name:<br>
+			<input type = "text" name = "pdtNm" />{{nmerr}}</br>
+         
+			Product Version:<br>
+			<input type = "text" name = "pdtVer" >{{verr}}<br>
+         
+			Bug Title:<br>
+			<input type = "text" name = "bug" />{{berr}}<br>
+         
+			Description:<br>
+			<input type = "textarea" name = "def" />{{derr}}<br>
+			
+			Severity:<br>
+			<select name = "severe">
+				<option value = "A">A - serious bug that prevents the product from used</option>
+				<option value = "B">B - impaired functionality</option>
+				<option value = "C">C - A minor bug</option>
+				<option value = "Q">Q - A question (not really a bug)</option>
+				<option value = "U">U - UI Issue</option>
+			</select>
+			<br>
+			
+			Status:<br>
+			<select name = "status">
+				<option value = "open">Open - Reported but no action taken</option>
+				<option value = "progress">In Progress - Being worked upon</option>
+				<option value = "fixed">Fixed - Fixed and yet to be tested</option>
+				<option value = "closed">Closed - Fixed, Tested and closed </option>
+			</select>
+			<br><br>
+			<input type = "submit" value = "Store Bug" />
+			<spacer type = "horizontal" size = "10">
+			<input type = "reset" value = "Clear Fields">
+		</form>
+      
+	</body>
+</html>

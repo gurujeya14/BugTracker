@@ -1,0 +1,17 @@
+<html>
+   <body>
+      
+      <form action = "http://127.0.0.1:5000/login_check" method = "POST">
+         <h3>Welcome Champ!!</h3>
+		{%for msg in get_flashed_messages()%}
+		<p color = "red">{{msg}}</p>
+		{%endfor%}
+         ID<br>
+         <input type = "text" name = "id" /></br>         
+         Password<br>
+         <input type = "password" name = "paswd" /></br>         
+         <input type = "submit" value = "Login" /><br>
+      </form>
+      
+   </body>
+</html>

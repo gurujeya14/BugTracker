@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<body>
+		<p align="right">
+		Logged in as {{user}} <br>
+		<a href="http://127.0.0.1:5000/signout">SignOut</a>
+		</p>
+		
+		{{ msg }}<br><br>
+		{%if flag == 0%}
+			<a href = "http://127.0.0.1:5000/viewAll/{{user}}">View Bug list</a><br>
+			<br>
+		{%else%}
+			<a href = "http://127.0.0.1:5000/submit/{{user}}">Unexpected error occured. Submit again with corresponding values<a><br>
+		{%endif%}
+		<a href = "http://127.0.0.1:5000/">Back to home page..</a>
+	</body>
+</html>
